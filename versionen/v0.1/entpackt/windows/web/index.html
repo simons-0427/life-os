@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Life OS</title>
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="navigation">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <div><strong>Life OS</strong><small>Beta</small></div>
+      </div>
+      <nav aria-label="Hauptnavigation" id="navigation">
+        <button type="button" data-view="overview" aria-current="page"><span aria-hidden="true">▦</span>Übersicht</button>
+        <button type="button" data-view="metrics"><span aria-hidden="true">⌁</span>Messwerte</button>
+        <button type="button" data-view="math"><span aria-hidden="true">∑</span>Mathematik</button>
+        <button type="button" data-view="data"><span aria-hidden="true">≡</span>API-Daten</button>
+        <button type="button" data-view="settings"><span aria-hidden="true">⚙</span>Einstellungen</button>
+      </nav>
+      <div class="nav-bottom" id="source-status" aria-live="polite"></div>
+    </aside>
+    <main id="main">
+      <header class="topbar">
+        <div><p class="top-date" id="heading-date"></p><h1 id="heading">Tagesübersicht</h1></div>
+        <div class="header-actions">
+          <label class="date-control" title="Angezeigter Tag"><span>Tag</span><input id="selected-day" type="date" aria-label="Angezeigter Tag"></label>
+          <button class="refresh" id="refresh" type="button" title="API neu laden"><span aria-hidden="true">↻</span> Aktualisieren</button>
+        </div>
+      </header>
+      <div id="notice" role="status"></div>
+      <div id="content" aria-live="off"><p class="loading">GymProgress-Daten werden geladen.</p></div>
+    </main>
+  </div>
+</body>
+</html>
